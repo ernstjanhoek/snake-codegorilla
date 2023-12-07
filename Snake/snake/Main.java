@@ -4,7 +4,37 @@ public class Main {
         Main.mainMenu();
         Main.gameOver();
     }
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_RED_BACKGROUND = "\u001B[41m";
+    public static final String ANSI_GREEN = "\u001B[32m";
     static void gameOver() {
+
+
+
+        System.out.println( " ------------------------------------------------- ");
+        System.out.println("|" + ANSI_GREEN +"  /$$$$$$                                         "+ ANSI_RESET + "|");
+        System.out.println("|" + ANSI_GREEN +" /$$__  $$                                        "+ ANSI_RESET + "|");
+        System.out.println("|" + ANSI_GREEN +"| $$   __/  /$$$$$$  /$$$$$$/$$$$   /$$$$$$       "+ ANSI_RESET + "|");
+        System.out.println("|" + ANSI_GREEN +"| $$ /$$$$ |____  $$| $$_  $$_  $$ /$$__  $$      "+ ANSI_RESET + "|");
+        System.out.println("|" + ANSI_GREEN +"| $$|_  $$  /$$$$$$$| $$   $$   $$| $$$$$$$$      "+ ANSI_RESET + "|");
+        System.out.println("|" + ANSI_GREEN +"| $$    $$ /$$__  $$| $$ | $$ | $$| $$_____/      "+ ANSI_RESET + "|");
+        System.out.println("|" + ANSI_GREEN +"|  $$$$$$/|  $$$$$$$| $$ | $$ | $$|  $$$$$$$      "+ ANSI_RESET + "|");
+        System.out.println("|" + ANSI_GREEN +" ______/    _______/|__/ |__/ |__/   _______/     "+ ANSI_RESET + "|");
+        System.out.println("|                                                  |");
+        System.out.println("|                                                  |");
+        System.out.println("|" + ANSI_GREEN +"  /$$$$$$  /$$    /$$  /$$$$$$   /$$$$$$          "+ ANSI_RESET + "|");
+        System.out.println("|" + ANSI_GREEN +" /$$__  $$|  $$  /$$/ /$$__  $$ /$$__  $$         "+ ANSI_RESET + "|");
+        System.out.println("|" + ANSI_GREEN +"| $$  \\ $$ \\  $$/$$/ | $$$$$$$$| $$  \\__/         "+ ANSI_RESET + "|");
+        System.out.println("|" + ANSI_GREEN +"| $$  | $$  \\  $$$/  | $$_____/| $$               "+ ANSI_RESET + "|");
+        System.out.println("|" + ANSI_GREEN +"|  $$$$$$/   \\  $/   |  $$$$$$$| $$               "+ ANSI_RESET + "|");
+        System.out.println("|" + ANSI_GREEN +"  \\______/     \\_/     \\_______/|__/              "+ ANSI_RESET + "|");
+        System.out.println(" ------------------------------------------------- ");
+
+
+
+
+
+
 
     }
     static void mainMenu() {
