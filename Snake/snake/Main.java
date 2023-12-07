@@ -34,7 +34,6 @@ public class Main {
 
 
 
-
     }
     static void mainMenu() {
         System.out.println(ANSI_GREEN_BACKGROUND + ANSI_BLACK +" ______________________________________________________________ "+ ANSI_RESET);
