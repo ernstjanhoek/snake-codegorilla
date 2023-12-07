@@ -3,11 +3,25 @@ public class Main {
     public static void main(String[] args) throws Exception {
         Main.mainMenu();
         Main.gameOver();
+        Main.gameStart();
     }
+
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
+    public static final String ANSI_RED_BACKGROUND = "\u001B[42m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_BLACK = "\u001B[30m";
+
+    private static void gameStart() {
+
+
+
+
+
+    }
+
+
+
     static void gameOver() {
 
 
@@ -50,5 +64,7 @@ public class Main {
         System.out.println(ANSI_GREEN_BACKGROUND + ANSI_BLACK +"|                                                               |"+ ANSI_RESET);
         System.out.println(ANSI_GREEN_BACKGROUND + ANSI_BLACK +"|                      Controls: wasd.             Quit: m.     |"+ ANSI_RESET);
         System.out.println(ANSI_GREEN_BACKGROUND + ANSI_BLACK +" _______________________________________________________________" + ANSI_RESET);
+
+
     }
 }
