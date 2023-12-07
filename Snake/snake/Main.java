@@ -27,7 +27,7 @@ public class Main {
         System.out.println("|" + ANSI_GREEN +"| $$  \\ $$ \\  $$/$$/ | $$$$$$$$| $$  \\__/         "+ ANSI_RESET + "|");
         System.out.println("|" + ANSI_GREEN +"| $$  | $$  \\  $$$/  | $$_____/| $$               "+ ANSI_RESET + "|");
         System.out.println("|" + ANSI_GREEN +"|  $$$$$$/   \\  $/   |  $$$$$$$| $$               "+ ANSI_RESET + "|");
-        System.out.println("|" + ANSI_GREEN +"  \\______/     \\_/     \\_______/|__/              "+ ANSI_RESET + "|");
+        System.out.println("|" + ANSI_GREEN +" \\______/     \\_/     \\_______/|__/              "+ ANSI_RESET + "|");
         System.out.println(" ------------------------------------------------- ");
 
 
