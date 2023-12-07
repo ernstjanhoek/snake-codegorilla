@@ -4,19 +4,65 @@ public class Main {
         Main.mainMenu();
         Main.gameOver();
         Main.gameStart();
+        Main.gameCredits();
     }
+
+
 
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
-    public static final String ANSI_RED_BACKGROUND = "\u001B[42m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_BLUE_BACKGROUND = "\u001B[44m";
     public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_BLACK = "\u001B[30m";
 
-    private static void gameStart() {
+    static void gameCredits() {
+        System.out.println(" ______________________________________________________" );
+        System.out.println("|" + ANSI_RED + " ██████╗██████╗ ███████╗██████╗ ██╗████████╗███████╗   "+ ANSI_RESET + "|");
+        System.out.println("|" + ANSI_RED + "██╔════╝██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝██╔════╝██╗"+ ANSI_RESET+ "|");
+        System.out.println("|" + ANSI_RED + "██║     ██████╔╝█████╗  ██║  ██║██║   ██║   ███████╗╚═╝"+ ANSI_RESET+ "|");
+        System.out.println("|" + ANSI_RED + "██║     ██╔══██╗██╔══╝  ██║  ██║██║   ██║   ╚════██║██╗"+ ANSI_RESET+ "|");
+        System.out.println("|" + ANSI_RED + "╚██████╗██║  ██║███████╗██████╔╝██║   ██║   ███████║╚═╝"+ ANSI_RESET+ "|");
+        System.out.println("|" + ANSI_RED + " ╚═════╝╚═╝  ╚═╝╚══════╝╚═════╝ ╚═╝   ╚═╝   ╚══════╝   "+ ANSI_RESET+ "|");
+        System.out.println("|" + ANSI_BLUE +   "╔═╗╦═╗╔╗╔╔═╗╔╦╗                                        "+ ANSI_RESET+ "|");
+        System.out.println("|" + ANSI_BLUE+    "║╣ ╠╦╝║║║╚═╗ ║                                         "+ ANSI_RESET+ "|");
+        System.out.println("|" + ANSI_BLUE +   "╚═╝╩╚═╝╚╝╚═╝ ╩                                         "+ ANSI_RESET+ "|");
+        System.out.println("|" + ANSI_YELLOW+  " ╦╔═╗╔╗╔                                               "+ ANSI_RESET+ "|");
+        System.out.println("|" + ANSI_YELLOW + " ║╠═╣║║║                                               "+ ANSI_RESET+ "|");
+        System.out.println("|" + ANSI_YELLOW + "╚╝╩ ╩╝╚╝                                               "+ ANSI_RESET+ "|");
+        System.out.println("|" + ANSI_GREEN +  "╔═╗╔═╗╔╗╔╔╦╗╦═╗╔═╗                                     "+ ANSI_RESET+ "|");
+        System.out.println("|" + ANSI_GREEN +  "╚═╗╠═╣║║║ ║║╠╦╝╠═╣                                     "+ ANSI_RESET+ "|");
+        System.out.println("|" + ANSI_GREEN +  "╚═╝╩ ╩╝╚╝═╩╝╩╚═╩ ╩                                     "+ ANSI_RESET+ "|");
+        System.out.println(" ______________________________________________________");
 
 
 
 
+
+
+
+
+
+
+    }
+
+    static void gameStart() {
+        System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ " __________________________________________" + ANSI_RESET);
+        System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ "| ███████ ████████  █████  ██████  ████████ |" + ANSI_RESET);
+        System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ "| ██         ██    ██   ██ ██   ██    ██    |" + ANSI_RESET);
+        System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ "| ███████    ██    ███████ ██████     ██    |" + ANSI_RESET);
+        System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ "|      ██    ██    ██   ██ ██   ██    ██    |" + ANSI_RESET);
+        System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ "| ███████    ██    ██   ██ ██   ██    ██    |" + ANSI_RESET);
+        System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ "|                                           |" + ANSI_RESET);
+        System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ "|                                           |" + ANSI_RESET);
+        System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ "|  ██████   █████  ███    ███ ███████       |" + ANSI_RESET);
+        System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ "| ██       ██   ██ ████  ████ ██            |" + ANSI_RESET);
+        System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ "| ██   ███ ███████ ██ ████ ██ █████         |" + ANSI_RESET);
+        System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ "| ██    ██ ██   ██ ██  ██  ██ ██            |" + ANSI_RESET);
+        System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ "|  ██████  ██   ██ ██      ██ ███████       |" + ANSI_RESET);
+        System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ " ___________________________________________" + ANSI_RESET);
 
     }
 
