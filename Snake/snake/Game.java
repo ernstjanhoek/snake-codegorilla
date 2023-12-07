@@ -1,8 +1,6 @@
 package snake;
-
 public class Game {
     char[][] gridArray;
-
     Game() {
         this.gridArray = new char[20][20];
         for (int i = 0; i < gridArray.length; i++) {
@@ -18,7 +16,6 @@ public class Game {
             }
         }
     }
-
     public String toString() {
         StringBuilder message = new StringBuilder();
         for (int i = 0; i < this.gridArray.length; i++) {
@@ -29,7 +26,7 @@ public class Game {
         }
         return message.toString();
     }
-    public boolean coordinatesOutOfBounds(int coordinateX, int coordinateY) {
-        return (this.gridArray.length - 1 < coordinateX || coordinateX < 0 || coordinateY < 0 || this.gridArray.length  - 1 < coordinateY);
+    public boolean coordinatesOutOfBounds(Coordinate coordinate) {
+        return (this.gridArray.length - 1 < coordinate.x || coordinate.x < 0 || coordinate.y < 0 || this.gridArray.length  - 1 < coordinate.y);
     }
 }

@@ -1,6 +1,13 @@
 package snake;
 public class Main {
     public static void main(String[] args) throws Exception {
+        Main.mainMenu();
+        Main.gameOver();
+    }
+    static void gameOver() {
+
+    }
+    static void mainMenu() {
         System.out.println("                             d8b              ");
         System.out.println("                             ?88              ");
         System.out.println("                              88b             ");
@@ -10,47 +17,5 @@ public class Main {
         System.out.println("`?888P' d88'   88b`?88P'`88bd88' `?88b,`?888P'");
         System.out.println("                                              ");
         System.out.println("     Controls: wasd.             Quit: m.     ");
-        Input input = new Input();
-        Snake snake = new Snake(1);
-        snake.pointSnake(new Coordinate(9,9));
-        Game game = new Game();
-        Render display = new Render();
-        /*
-        Tijdens het maken van alle objecten voor het spel zou ook het eerste appeltje al geplaatst kunnen worden.
-         */
-        input.startGame();
-        while(input.gameStarted) {
-            GameAction action = input.getUserInput();
-            if (action == GameAction.GAME_QUIT) {
-                input.gameStarted = false;
-            }
-            Render.clear();
-            game.resetData();
-            snake.updateDirection(input.lastDirection);
-            snake.placeSnake(game);
-            Coordinate appleTestCoordinate = new Coordinate(10, 9);
-            System.out.println(appleTestCoordinate.x + " " + appleTestCoordinate.y);
-            System.out.println(snake.coordinateArray.length);
-            if (snake.coordinateArray[0].x == appleTestCoordinate.x && snake.coordinateArray[0].y == appleTestCoordinate.y) {
-                /*
-                Als het nieuwste snakeveld gelijk is aan coordinaten van appel, dan groeit de snake.
-                Hier zou ook een update kunnen plaatsvinden om de oude appel te verwijderen en een nieuwe te plaatsen.
-                 */
-                System.out.println("Eating apple!");
-                snake.eatApple(appleTestCoordinate);
-                System.out.println(snake.coordinateArray.length);
-            }
-            if (game.coordinatesOutOfBounds(snake.coordinateArray[0].x, snake.coordinateArray[0].y)) {
-                System.out.println("GAME OVER!");
-                input.gameStarted = false;
-            } else {
-                String displayMessage = display.buildDisplayString(game);
-                System.out.println(displayMessage);
-            }
-            for (int i = 0; i < snake.coordinateArray.length; i++) {
-                System.out.println(i + " x: " + snake.coordinateArray[i].x + " y: " + snake.coordinateArray[i].y);
-            }
-            Thread.sleep(350, 0);
-        }
     }
 }

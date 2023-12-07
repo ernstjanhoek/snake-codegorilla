@@ -11,7 +11,6 @@ enum GameAction {
     GAME_START,
     GAME_QUIT
 }
-
 public class Input {
     boolean gameStarted;
     Directions lastDirection;
