@@ -44,7 +44,6 @@ public class Snake extends Game {
         if (snakeHead.collides(this.currentApple)) { // grow and move
             this.coordinateArray.add(this.currentApple);
             this.currentApple = AppleGenerator.generateAppleCoordinates(this.snakeHead, this.coordinateArray, gridArray.length);// generate new and set new apple!
-
         }
         for (int i = coordinateArray.size()-1; i >= 0; --i) {
            if (i == 0 ) {
