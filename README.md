@@ -5,6 +5,7 @@ In de samenwerking hebben we met name geconcentreerd op het toepassen van ideeë
 - Werken in iteraties. 
 - Een Definition of Ready.
 - Een Definition of Done.
+- Vaste overlegmomenten [Verwoorden naar scrum]
 ## Instructions
 Als je het spel zelf wilt spelen is:
 - Clone deze repository.
