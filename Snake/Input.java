@@ -1,18 +1,9 @@
-package snake;
+package Snake;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
 
 import static java.lang.Thread.sleep;
-
-enum GameAction {
-    MOVE_UP,
-    MOVE_DOWN,
-    MOVE_LEFT,
-    MOVE_RIGHT,
-    GAME_START,
-    GAME_QUIT
-}
 
 public class Input {
     boolean gameStarted;

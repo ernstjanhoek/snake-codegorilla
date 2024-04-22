@@ -1,5 +1,6 @@
-package snake;
+package Snake;
 
+import static java.lang.System.exit;
 import static java.lang.Thread.sleep;
 
 public class Main {
@@ -29,7 +30,7 @@ public class Main {
                 snakeGame.updateGrid();
                 System.out.println(display.buildDisplayString(snakeGame));
             }
-        } catch (Exception e) {
+        } catch (ArrayIndexOutOfBoundsException e) {
             if (display.OS != Render.OperatingSystem.WINDOWS) {
                 String[] cmdSane = {"/bin/sh", "-c", "stty sane </dev/tty"};
                 Runtime.getRuntime().exec(cmdSane).waitFor();
@@ -38,6 +39,7 @@ public class Main {
             sleep(1500);
             Render.clear();
             Main.gameCredits();
+            exit(0);
         }
     }
     public static final String ANSI_RESET = "\u001B[0m";
@@ -83,7 +85,6 @@ public class Main {
         System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ "|  ██████  ██   ██ ██      ██ ███████       |" + ANSI_RESET);
         System.out.println(ANSI_BLUE_BACKGROUND+ANSI_GREEN+ " ___________________________________________" + ANSI_RESET);
     }
-
     static void gameOver() {
         System.out.println("  ------------------------------------------------- ");
         System.out.println("|" + ANSI_GREEN +"  /$$$$$$                                         "+ ANSI_RESET + "|");
@@ -103,10 +104,6 @@ public class Main {
         System.out.println("|" + ANSI_GREEN +"|  $$$$$$/   \\  $/   |  $$$$$$$| $$               "+ ANSI_RESET + "|");
         System.out.println("|" + ANSI_GREEN +" \\______/     \\_/     \\_______/|__/               "+ ANSI_RESET + "|");
         System.out.println(" ------------------------------------------------- ");
-
-
-
-
     }
     static void mainMenu() {
         System.out.println(ANSI_GREEN_BACKGROUND + ANSI_BLACK +" ______________________________________________________________ "+ ANSI_RESET);
@@ -123,7 +120,5 @@ public class Main {
         System.out.println(ANSI_GREEN_BACKGROUND + ANSI_BLACK +"|                                                               |"+ ANSI_RESET);
         System.out.println(ANSI_GREEN_BACKGROUND + ANSI_BLACK +"| Controls: wasd.     Quit: m.    Press enter to start the game.|"+ ANSI_RESET);
         System.out.println(ANSI_GREEN_BACKGROUND + ANSI_BLACK +" _______________________________________________________________" + ANSI_RESET);
-
-
     }
 }

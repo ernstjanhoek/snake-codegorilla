@@ -1,4 +1,4 @@
-package snake;
+package Snake;
 public class Render {
     static {
         if (System.getProperty("os.name").startsWith("Win")) {

@@ -1,7 +1,6 @@
-package snake;
+package Snake;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Snake extends Game {
     TileEnum[][] gridArray;
@@ -44,7 +43,6 @@ public class Snake extends Game {
         if (snakeHead.collides(this.currentApple)) { // grow and move
             this.coordinateArray.add(this.currentApple);
             this.currentApple = AppleGenerator.generateAppleCoordinates(this.snakeHead, this.coordinateArray, gridArray.length);// generate new and set new apple!
-
         }
         for (int i = coordinateArray.size()-1; i >= 0; --i) {
            if (i == 0 ) {
@@ -56,45 +54,6 @@ public class Snake extends Game {
         this.snakeHead.update(this.currentDir);
         if (this.coordinateArray.contains(this.snakeHead)) {
             throw new Exception ();
-        }
-    }
-}
-class Coordinate {
-    int x, y;
-    Coordinate(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-    public boolean collides(Coordinate otherCoordinate) {
-        return this.x == otherCoordinate.x && this.y == otherCoordinate.y;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Coordinate that = (Coordinate) o;
-        return x == that.x && y == that.y;
-    }
-    @Override
-    public int hashCode() {
-        return Objects.hash(x, y);
-    }
-
-    void update(Directions option) {
-        switch (option) {
-            case UP:
-                this.y--;
-                break;
-            case DOWN:
-                this.y++;
-                break;
-            case LEFT:
-                this.x--;
-                break;
-            case RIGHT:
-                this.x++;
-                break;
         }
     }
 }

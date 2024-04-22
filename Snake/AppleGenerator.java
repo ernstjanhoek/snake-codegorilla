@@ -1,4 +1,4 @@
-package snake;
+package Snake;
 
 import java.util.ArrayList;
 import java.util.Random;
